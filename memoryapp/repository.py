@@ -66,6 +66,19 @@ def create_card(category_id, word, translation):
     return card
 
 
+def delete_card(category_id, card_id):
+    categories_results = [category for category in categories_list if category.category_id == category_id]
+
+    if not categories_results:  # jezeli jest pusta not categories
+        raise NotFoundException('Category')
+
+    cards_results = [card for card in cards_list if card.category_id == category_id and card.card_id == card_id]
+
+    if cards_results:
+        cards_list[:] = [card for card in cards_list if card.category_id != category_id or card.card_id != card_id]
+    else:
+        raise NotFoundException('Card')
+
 def __next_category_id():
     global id_categories
     id_categories += 1
