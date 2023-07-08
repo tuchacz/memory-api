@@ -25,4 +25,5 @@ def category(category_id):
 def remove_category(category_id):
     delete_category(category_id)
 
-    return '', 204  # 204 kod odpowiedzi
+    return '', 204  # 204 kod odpowiedzi do usuwania
+
