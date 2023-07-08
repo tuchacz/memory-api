@@ -1,6 +1,8 @@
+from memoryapp.models import Category
+
 categories_list = [
-    {'category_id': 1, 'name': 'Dom'},
-    {'category_id': 2, 'name': 'Rodzina'}
+    Category(1, 'Dom'),
+    Category(2, 'Rodzina')
 ]
 
 
