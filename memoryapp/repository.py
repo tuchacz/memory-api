@@ -92,3 +92,4 @@ def __next_card_id():
     global id_cards
     id_cards += 1
     return id_cards
+
